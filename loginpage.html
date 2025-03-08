@@ -3,53 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="loginpage.css">
+    <link rel="stylesheet" href="loginpage.css" class="loginpage">
     <title>Document</title>
 </head>
 <body>
     
-    <form>
-        <table >
-     <tr>
-        <td><level for="login" style="color:black">Login</level></td>
-     </tr>
-     <tr>
-        <td>
-          
-        <input type="text" id="email" name="email"  placeholder="Email" style="color: green;" required>
-    </td>
-     </tr>
-     
-     <tr>
-    <td>
-        <input type="text" id="password" name="password" placeholder="Password" required>
-       
-    </td>
-</tr>
-    <tr>
-    <td>
-        
-        <input type="checkbox" name="remember" value="remember"><level for="remember"> Remember Me!</level>
-        
-        <level for="forget" style="color: red;"><a href="forget">Forgot Password</a></level>
-    </td>
-     </tr>
-    <tr>
-        <td><button type="button" style="background-color: rgb(145, 14, 14);">Sign in</button></td>
-    </tr>
-    <td>
-     <p>Do not have Account..?<a href="Sign up">Sign up</a></p></td>
-     </tr>
-     <td>
-        <a href="Cooosess" class="chossse">chossse</a>
+<div class="login-box">
+<div class="login">
+    <h1 class="login">Login</h1>
+</div>
+<div class="input-box">
+    <input type="text" class="input-field" placeholder="Email" autocomplete="off"  required>
+</div>
 
-    </td>
-        </tr>
-
-    </table>
-    </form>
-
+<div class="input-box">
+    <input type="text" class="input-field" placeholder="Password" autocomplete="off"  required>
+</div>
+<div class="forgot">
+    <section>
+        <input type="checkbox" name="#" id="check">
+        <level for="check">Remember me!</level>
+    <a href="#">Forgot Password</a>
+    </section>
     
-    
+</div>
+
+<div class="sign-in">
+   <button class="submit " id="submit"></button>
+   <level for="submit">sign in</level>
+</div>
+<din class="sign-up-link">
+    <p>Don't have Account..? <a href="" class="sign-up">Sign up</a></p>
+</din>
+
+
+
+</div>
+
 </body>
 </html>
