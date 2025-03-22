@@ -1,0 +1,49 @@
+
+<html lang="en">
+<head>
+    <title>JS Example</title>
+</head>
+<body>
+    <h1 id="head">JS Example</h1>
+    
+    <form method="" action="" onsubmit="return test()">
+        <input type="text" id="username" name="username" placeholder="username" value="" onblur="test()"/>
+        <input type="text" id="password" name="password" placeholder="password" value="" onblur="test()"/>
+        <input type="submit" name="button" id="button" value="Submit" />
+    </form>
+
+    <p id="msg"></p>
+
+
+    <script>
+       
+   
+  
+
+    function test(){
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        let msg = document.getElementById('msg');
+
+        if(username == ""){
+            msg.innerHTML = "please type username first!";
+            msg.style.color = 'red';
+            return false;
+        }
+        if(password == ""){
+            msg.innerHTML = "please type password first!";
+            msg.style.color = 'red';
+            return false;
+        }
+        
+        
+        else {
+            document.getElementById('head').innerHTML = username;
+            msg.innerHTML = "";
+            return true;
+        }
+    }
+
+    </script>
+</body>
+</html>
