@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Picture</title>
 </head>
 <body>
   <fieldset>
     <legend>Profile Picture</legend>
-    <form>
+    <form action="" onsubmit="return validationpicture()">
         <table>
             <tr>
                 <td>
-                    <level class="User Id" id="d1">User Id</level>
-                    <input type="User" name="User" id=""> <label for=""></label>
-                    
+                    <label for="userId">User Id</label>
+                    <input type="text" name="User" id="userId" />
                 </td>
             </tr>
             <tr>
                 <td>
-                    <level for="Picture">Picture</level>
-                    <button>Browse...</button>
-                    <level for="NO-file">No File Selected</level>
-                
+                    <label for="picture">Picture</label>
+                    <input type="file" id="picture" accept="image/*" />
                 </td>
-                
             </tr>
-            
-              
-              <tr>
+            <tr>
                 <td colspan="4"><hr /></td>
-              </tr>
-              <tr>
-                <td><a href="Profile-Picture.html" class="harf"><button>Sumbit</button></a></td>
-              </tr>
+            </tr>
+            <tr>
+                <td>
+                  <input type="submit" name="button" id="button" value="Submit" />
+              </td>
+            </tr>
         </table>
-      </form>
+    </form>
   </fieldset><br>
+  
+  <script>
+    function validationpicture() {
+      const userId = document.getElementById("userId").value.trim();
+      const picture = document.getElementById("picture").files[0];
+
+      if (userId === "") {
+        alert("Please enter your User ID.");
+        return false;
+      }
+
+      if (!picture) {
+        alert("Please upload a profile picture.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 
 </body>
 </html>

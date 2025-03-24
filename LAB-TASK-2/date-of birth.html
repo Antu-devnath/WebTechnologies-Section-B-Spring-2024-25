@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Date of Birth</title>
 </head>
 <body>
   <fieldset>
-    <legend>Dath Of Birth</legend>
-    <form>
+    <legend>Date Of Birth</legend>
+    <form action="Degree.html" onsubmit="return validationdateOfBirth()">
         <table>
             <tr>
                 <td>
-                    <input type="date" name="date" id=""> <label for=""></label>
-                    
+                    <input type="date" name="date" id="dob" />
                 </td>
             </tr>
-            
-              
-              <tr>
+            <tr>
                 <td colspan="4"><hr /></td>
-              </tr>
-              <tr>
-                <td><a href="Degree.html" class="harf"><button>Sumbit</button></a></td>
-              </tr>
+            </tr>
+            <tr>
+                <td><input type="submit" name="button" id="button" value="Submit" /></td>
+            </tr>
         </table>
-      </form>
+    </form>
   </fieldset><br>
 
+  <script>
+    function validationdateOfBirth() {
+      const dobInput = document.getElementById('dob');
+      const dobValue = dobInput.value;
+
+      if (!dobValue) {
+        alert("Please enter your date of birth.");
+        return false;
+      }
+
+      const dateObj = new Date(dobValue);
+      if (isNaN(dateObj.getTime())) {
+        alert("Please enter a valid date.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 </body>
 </html>

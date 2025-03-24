@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Degree</title>
 </head>
 <body>
   <fieldset>
     <legend>Degree</legend>
-    <form>
+    <form action="Blood.html" onsubmit="return validationdegree()">
         <table>
             <tr>
                 <td>
-                    <input type="checkbox" name="SSC" id=""> <label for="">SSC</label>
-                    <input type="checkbox" name="HSC" id=""> <label for="">HSC</label>
-                    <input type="checkbox" name="BSC" id=""> <label for="">BSC</label>
+                    <input type="checkbox" name="SSC" id="ssc" />
+                    <label for="ssc">SSC</label>
+                    
+                    <input type="checkbox" name="HSC" id="hsc" />
+                    <label for="hsc">HSC</label>
+                    
+                    <input type="checkbox" name="BSC" id="bsc" />
+                    <label for="bsc">BSC</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="button" id="button" value="Submit" />
                 </td>
             </tr>
         </table>
     </form>
   </fieldset><br>
 
-  <td><a href="Blood.html" class="harf"><button>Sumbit</button></a></td>
+  <script>
+    function validationdegree() {
+      const ssc = document.getElementById('ssc');
+      const hsc = document.getElementById('hsc');
+      const bsc = document.getElementById('bsc');
+
+      if (!(ssc.checked || hsc.checked || bsc.checked)) {
+        alert("At least SSC is required.");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </body>
 </html>
