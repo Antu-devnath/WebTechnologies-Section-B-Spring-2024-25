@@ -2,25 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gender</title>
 </head>
 <body>
   <fieldset>
     <legend>GENDER</legend>
-    <FROM>
+    <form action="date-of-birth.html" onsubmit="return validationGender();">
         <table>
             <tr>
                 <td>
-                    <input type="radio" name="gender" id=""> <label for="">Male</label>
-                    <input type="radio" name="gender" id=""> <label for="">Female</label>
-                    <input type="radio" name="gender" id=""> <label for="">Other</label>
+                    <input type="radio" name="gender" id="male"> <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female"> <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other"> <label for="other">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="button" id="button" value="Submit" />
                 </td>
             </tr>
         </table>
-    </FROM>
-  </fieldset><br>
+    </form>
+  </fieldset>
 
-  <td><button for="submit">Submit</button></td>
+  <script>
+    function validationGender() {
+        const maleGender = document.getElementById('male');
+        const femaleGender = document.getElementById('female');
+        const otherGender = document.getElementById('other');
+ 
+        if (!(maleGender.checked || femaleGender.checked || otherGender.checked)) {
+            alert("Please select a gender.");
+            return false;
+        }
+        return true;
+    }
+  </script>
 </body>
 </html>

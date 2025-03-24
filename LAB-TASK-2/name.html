@@ -6,28 +6,41 @@
     <title>NAME PAGE</title>
 </head>
 <body>
-    <from>
-        <table>
-            <tr>
-                <td ><level class="name">Name</level></td>
-                
-            </tr>
-            <tr>
-                <td><input type="name" class="name"></td>
-            </tr>
-            <tr>
-                <td><button class="submit">Submit</button></td>
-            </tr>
-        </table>
-    </from>
+    <fieldset>
+        <legend>Name</legend>
+        <form action="email.html" onsubmit="return validationName()">
+            <table>
+                <tr>
+                    <td><label for="name" class="name">Name</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="button" id="button" value="Submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
 
     <script>
-        function validateName(){
-            let Name=document.getElementById('name').value;
-            let msg = document.getElementsById('msg');
+        function validationName(){
+            const name = document.getElementById('name').value.trim();
+            const words = name.split(/\s+/);
 
-        }
+            if (name === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+            else if (words.length < 2) {
+                alert("Name must contain at least two words.");
+                return false;
+            }
+
+            return true;
+        };
     </script>
-    
 </body>
 </html>
