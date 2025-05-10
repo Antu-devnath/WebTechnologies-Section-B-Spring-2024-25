@@ -35,9 +35,9 @@
 
     <script>
         function validationBloodGroup() {
-            const bloodGroupOptions = document.getElementById('Blood');
+            var bloodGroupOptions = document.getElementById('Blood').value;
             
-            if (bloodGroupOptions.value === "") {
+            if (bloodGroupOptions === "") {
                 alert("Please choose your blood group.");
                 return false;
             }

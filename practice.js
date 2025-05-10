@@ -1,3 +1,2 @@
-for(let i = 0; i < 5; i++){
-    console.log(i)
-}
+
+console.log(0.1+0.2==0.3);

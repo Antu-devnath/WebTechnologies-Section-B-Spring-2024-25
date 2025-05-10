@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration</title>
+  <link rel="stylesheet" href="registration.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <i class="fas fa-arrow-left back-btn" onclick="window.location.href='index.html'"></i>
+    <h2>Registration</h2>
+    <p>Sign up now and get full access to our Event</p>
+
+    <form class="signup-form" method="post" action="registration.php">
+      <div class="name-fields">
+        <input type="text" placeholder="First name" name="firstName"  />
+        <input type="text" placeholder="Last name" name="lastName" />
+      </div>
+
+      <input type="email" placeholder="Email address" name="email"  />
+
+      <div class="password-field">
+        <input type="password" placeholder="Password" name="password"  />
+      </div>
+
+      <div class="password-field">
+        <input type="password" placeholder="Confirm Password" name="confirmPassword"  />
+      </div>
+
+      <button type="submit" class="signup-btn" name="submit">Sign up</button>
+
+      <div class="divider">Or, Sign up with</div>
+
+      <div class="social-buttons">
+        <a href="#" class="social google"><i class="fab fa-google"></i>Google</a>
+        <a href="#" class="social facebook"><i class="fab fa-facebook-f"></i>Facebook</a>
+        <a href="#" class="social apple"><i class="fab fa-apple"></i>Apple</a>
+      </div>
+
+      <p class="terms">
+        By clicking "Sign up", you agree to our 
+        <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+      </p>
+
+      <p class="login">
+        Already have an account? <a href="#">Log In</a>
+      </p>
+    </form>
+  </div>
+</body>
+</html>
